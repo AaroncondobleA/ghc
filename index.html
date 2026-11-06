@@ -12,7 +12,6 @@
       --text: #e5e5e5;
       --accent: #ffffff;
       --muted: #a3a3a3;
-      --gold: #d4af37;
     }
 
     * {
@@ -61,7 +60,6 @@
       height: 48px;
       max-width: 120px;
       object-fit: contain;
-      /* Adapta la imagen eliminando el fondo blanco en modo oscuro */
       filter: grayscale(100%) invert(100%) brightness(1.8);
       mix-blend-mode: screen;
       flex-shrink: 0;
@@ -73,14 +71,14 @@
     }
 
     .institution-info h2 {
-      font-size: 0.85rem;
+      font-size: 0.81rem;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
     .institution-info h3 {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--accent);
       font-weight: 600;
     }
@@ -99,7 +97,7 @@
       margin-top: 0.2rem;
     }
 
-    /* FICHAS Y TARJETAS DESPLEGABLES */
+    /* TARJETAS DESPLEGABLES */
     details {
       background: var(--card);
       border: 1px solid var(--border);
@@ -146,5 +144,220 @@
       padding: 0 1.25rem 1.25rem 1.25rem;
       border-top: 1px solid var(--border);
       margin-top: 0.2rem;
-      padding-top: 1
-    
+      padding-top: 1rem;
+    }
+
+    p {
+      margin-bottom: 0.8rem;
+      font-size: 0.92rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-size: 0.92rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .img-container {
+      margin: 1rem 0 0.5rem 0;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #000;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      max-height: 220px;
+    }
+
+    .caption {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+      padding: 0.4rem;
+      background: #0f0f0f;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #202020;
+      color: var(--muted);
+      font-size: 0.72rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <!-- Bandera de Venezuela SVG -->
+      <svg class="flag-svg" viewBox="0 0 640 426">
+        <rect width="640" height="142" fill="#FFCC00"/>
+        <rect y="142" width="640" height="142" fill="#00247D"/>
+        <rect y="284" width="640" height="142" fill="#CF142B"/>
+        <g fill="#FFF" transform="translate(320, 213) scale(18)">
+          <circle cx="-3.5" cy="-0.5" r="0.15"/><circle cx="-2.5" cy="-1.5" r="0.15"/>
+          <circle cx="-1.2" cy="-2.2" r="0.15"/><circle cx="0" cy="-2.5" r="0.15"/>
+          <circle cx="1.2" cy="-2.2" r="0.15"/><circle cx="2.5" cy="-1.5" r="0.15"/>
+          <circle cx="3.5" cy="-0.5" r="0.15"/>
+        </g>
+      </svg>
+
+      <div class="institution-info">
+        <h2>República Bolivariana de Venezuela</h2>
+        <h3>U.E. Padre Reyes Cueta</h3>
+      </div>
+
+      <!-- Referencia correcta al logo del liceo -->
+      <img src="1000013254.jpg" alt="Logo U.E. Padre Reyes Cueta" class="school-logo">
+    </div>
+
+    <h1>Petróleo & Soberanía</h1>
+    <p class="subtitle">Investigación escolar sobre la historia, origen y geopolítica del crudo venezolano</p>
+  </header>
+
+  <main>
+
+    <!-- 01. CONCEPTO -->
+    <details>
+      <summary>01. Introducción y Concepto</summary>
+      <div class="content">
+        <p>
+          La palabra <span class="highlight">petróleo</span> proviene del latín <em>petroleum</em>, compuesto por <em>petra</em> (piedra) y <em>oleum</em> (aceite). Significa literalmente «aceite de piedra», haciendo referencia a su extracción desde estratos rocosos del subsuelo.
+        </p>
+        <p>
+          Es una sustancia orgánica combustible, de consistencia viscosa y tonalidades oscuras (negro o verdoso) en condiciones normales de temperatura y presión, conformada por una mezcla compleja de hidrocarburos.
+        </p>
+        <span class="tag">Etimología y Definición</span>
+      </div>
+    </details>
+
+    <!-- 02. ORIGEN EN EL MESOZOICO -->
+    <details>
+      <summary>02. Origen Geológico (Mesozoico)</summary>
+      <div class="content">
+        <p>
+          Su origen se remonta a la era <span class="highlight">Mesozoica</span> (hace entre 250 y 66 millones de años). En ese período, mares cálidos y poco profundos cubrían gran parte de lo que hoy es el territorio venezolano.
+        </p>
+        <p>
+          Millones de peces, algas y microorganismos (plancton) al morir caían al lecho marino. Con el tiempo, quedaron sepultados bajo capas sedimentarias de limo y fango. La ausencia de oxígeno, junto a elevadas presiones y temperaturas en la profundidad de la Tierra, transformaron esta materia orgánica en yacimientos de petróleo.
+        </p>
+        <div class="img-container">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=60" alt="Formación sedimentaria geológica" loading="lazy">
+          <div class="caption">Estratos rocosos sedimentarios continentales donde se aloja el crudo.</div>
+        </div>
+        <span class="tag">Formación Orgánica</span>
+      </div>
+    </details>
+
+    <!-- 03. IMPORTANCIA Y SOBERANÍA -->
+    <details>
+      <summary>03. Importancia Estratégica y Soberanía</summary>
+      <div class="content">
+        <p>El recurso petrolero constituye el eje central de la soberanía nacional a través de cuatro pilares:</p>
+        <ul>
+          <li><span class="highlight">Fuente de ingresos y divisas:</span> Constituye el principal motor económico y financiero de la República.</li>
+          <li><span class="highlight">Desarrollo e infraestructura:</span> Impulsó la modernización vial, urbana, médica y educativa durante el siglo XX y XXI.</li>
+          <li><span class="highlight">Matriz energética nacional:</span> Asegura el suministro de combustible e insumos térmicos para el país.</li>
+          <li><span class="highlight">Relevancia geopolítica:</span> Posiciona a Venezuela como referente estratégico en la OPEP y la política internacional.</li>
+        </ul>
+        <span class="tag">Geopolítica</span>
+      </div>
+    </details>
+
+    <!-- 04. TIPOS DE PETRÓLEO -->
+    <details>
+      <summary>04. Tipos de Petróleo según Densidad</summary>
+      <div class="content">
+        <p>El crudo se clasifica según la escala de gravedad API:</p>
+        <ul>
+          <li><span class="highlight">Crudo Liviano (&gt;31.1° API):</span> Fluido y fácil de refinar; ideal para obtener gasolinas.</li>
+          <li><span class="highlight">Crudo Mediano (22.3° a 31.1° API):</span> Equilibrado para transporte y procesamiento.</li>
+          <li><span class="highlight">Crudo Pesado (10° a 22.3° API):</span> Alta densidad y viscosidad.</li>
+          <li><span class="highlight">Crudo Extrapesado (&lt;10° API):</span> Denso como el asfalto, característico de la Faja del Orinoco.</li>
+        </ul>
+        <span class="tag">Gravedad API</span>
+      </div>
+    </details>
+
+    <!-- 05. YACIMIENTOS -->
+    <details>
+      <summary>05. Yacimientos Petrolíferos</summary>
+      <div class="content">
+        <p>
+          Un <span class="highlight">yacimiento</span> es una roca porosa y permeable subterránea (roca almacén) revestida por una capa impermeable (roca sello) que atrapa los hidrocarburos.
+        </p>
+        <ul>
+          <li><span class="highlight">Según el fluido:</span> Yacimientos de petróleo, de gas natural o mixtos.</li>
+          <li><span class="highlight">Según la trampa:</span> Estructurales (fallas o anticlinales) y estratigráficas.</li>
+        </ul>
+        <span class="tag">Estructura Subterránea</span>
+      </div>
+    </details>
+
+    <!-- 06. FAJA DEL ORINOCO -->
+    <details>
+      <summary>06. Faja Petrolífera del Orinoco</summary>
+      <div class="content">
+        <p>
+          Ubicada al sur de la Cuenca Oriental, es la reserva hidrocarburífera de crudo extrapesado más grande del mundo.
+        </p>
+        <p>
+          Anteriormente llamada <span class="highlight">«Faja Bituminosa»</span> debido a que en décadas pasadas se clasificó erróneamente su crudo como bitumen o asfalto natural no comercial. Investigaciones posteriores demostraron su naturaleza de petróleo pesado procesable, consolidando la soberanía energética del país.
+        </p>
+        <span class="tag">Reserva Mundial</span>
+      </div>
+    </details>
+
+    <!-- 07. CUENCAS PETROLÍFERAS -->
+    <details>
+      <summary>07. Principales Cuencas Petrolíferas</summary>
+      <div class="content">
+        <p>Distribución geográfica del petróleo en territorio venezolano:</p>
+        <ul>
+          <li><span class="highlight">Cuenca del Lago de Maracaibo:</span> Históricamente la más productiva de la nación.</li>
+          <li><span class="highlight">Cuenca Oriental:</span> La más extensa, abarca Anzoátegui, Monagas, Sucre y la Faja del Orinoco.</li>
+          <li><span class="highlight">Cuenca Barinas-Apure:</span> Situada en los llanos occidentales.</li>
+          <li><span class="highlight">Cuenca Margarita / Marina:</span> Área insular rica en reservas gasíferas.</li>
+          <li><span class="highlight">Cuenca Tuy-Cariaco:</span> Ubicada en la costa central/oriental con potencial offshore.</li>
+        </ul>
+        <span class="tag">Geografía Nacional</span>
+      </div>
+    </details>
+
+  </main>
+
+  <footer>
+    <p>Proyecto de Investigación Escolar</p>
+    <p><strong>U.E. Padre Reyes Cueta</strong> — Venezuela</p>
+  </footer>
+
+</body>
+  </html>
+  
