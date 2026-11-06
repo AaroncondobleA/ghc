@@ -12,6 +12,7 @@
       --text: #e5e5e5;
       --accent: #ffffff;
       --muted: #a3a3a3;
+      --gold: #d4af37;
     }
 
     * {
@@ -46,7 +47,6 @@
       margin-bottom: 1rem;
     }
 
-    /* SVG de la Bandera de Venezuela */
     .flag-svg {
       width: 55px;
       height: 38px;
@@ -55,7 +55,6 @@
       flex-shrink: 0;
     }
 
-    /* Logo del Liceo adaptado */
     .school-logo {
       height: 48px;
       max-width: 120px;
@@ -167,28 +166,15 @@
       font-weight: 600;
     }
 
-    .img-container {
-      margin: 1rem 0 0.5rem 0;
-      border-radius: 6px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: #000;
-    }
-
-    .img-container img {
+    /* Ilustraciones SVG internas (ultra ligeras) */
+    .svg-graphic {
       width: 100%;
-      height: auto;
+      max-height: 160px;
+      background: #080808;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin: 0.8rem 0;
       display: block;
-      object-fit: cover;
-      max-height: 220px;
-    }
-
-    .caption {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-align: center;
-      padding: 0.4rem;
-      background: #0f0f0f;
     }
 
     .tag {
@@ -200,6 +186,15 @@
       border-radius: 4px;
       margin-top: 0.5rem;
       border: 1px solid var(--border);
+    }
+
+    .fact-box {
+      background: #181818;
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem;
+      margin: 0.8rem 0;
+      font-size: 0.88rem;
+      border-radius: 0 6px 6px 0;
     }
 
     footer {
@@ -234,7 +229,7 @@
         <h3>U.E. Padre Reyes Cueta</h3>
       </div>
 
-      <!-- Referencia correcta al logo del liceo -->
+      <!-- Logo del Liceo -->
       <img src="1000013254.jpg" alt="Logo U.E. Padre Reyes Cueta" class="school-logo">
     </div>
 
@@ -249,29 +244,35 @@
       <summary>01. Introducción y Concepto</summary>
       <div class="content">
         <p>
-          La palabra <span class="highlight">petróleo</span> proviene del latín <em>petroleum</em>, compuesto por <em>petra</em> (piedra) y <em>oleum</em> (aceite). Significa literalmente «aceite de piedra», haciendo referencia a su extracción desde estratos rocosos del subsuelo.
+          La palabra <span class="highlight">petróleo</span> proviene del latín <em>petroleum</em>, compuesto por <em>petra</em> (piedra) y <em>oleum</em> (aceite). Significa literalmente «aceite de piedra», haciendo referencia a su extracción directa desde las rocas del subsuelo.
         </p>
         <p>
-          Es una sustancia orgánica combustible, de consistencia viscosa y tonalidades oscuras (negro o verdoso) en condiciones normales de temperatura y presión, conformada por una mezcla compleja de hidrocarburos.
+          Es una sustancia orgánica combustible, de consistencia viscosa y tonalidades oscuras en condiciones normales de temperatura y presión, conformada por una mezcla compleja de hidrocarburos.
         </p>
+        <div class="fact-box">
+          <strong>Dato curioso:</strong> Mucho antes de la llegada de la industria moderna, los pueblos originarios de Venezuela ya utilizaban el petróleo superficial (conocido como <em>mene</em>) para calafatear canoas, impermeabilizar techos y con fines medicinales.
+        </div>
         <span class="tag">Etimología y Definición</span>
       </div>
     </details>
 
-    <!-- 02. ORIGEN EN EL MESOZOICO -->
+    <!-- 02. ORIGEN GEOLÓGICO -->
     <details>
       <summary>02. Origen Geológico (Mesozoico)</summary>
       <div class="content">
         <p>
-          Su origen se remonta a la era <span class="highlight">Mesozoica</span> (hace entre 250 y 66 millones de años). En ese período, mares cálidos y poco profundos cubrían gran parte de lo que hoy es el territorio venezolano.
+          Su formación data de hace millones de años, principalmente durante la era <span class="highlight">Mesozoica</span>. En este período, mares poco profundos cubrían partes importantes del territorio.
         </p>
         <p>
-          Millones de peces, algas y microorganismos (plancton) al morir caían al lecho marino. Con el tiempo, quedaron sepultados bajo capas sedimentarias de limo y fango. La ausencia de oxígeno, junto a elevadas presiones y temperaturas en la profundidad de la Tierra, transformaron esta materia orgánica en yacimientos de petróleo.
+          Peces, algas y microorganismos (plancton) al morir caían al lecho marino. Al quedar sepultados bajo capas de sedimentos y sin presencia de oxígeno, la descomposición bacteriana combinada con enormes presiones y altas temperaturas terrestres transformó lentamente la materia orgánica en crudo.
         </p>
-        <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=60" alt="Formación sedimentaria geológica" loading="lazy">
-          <div class="caption">Estratos rocosos sedimentarios continentales donde se aloja el crudo.</div>
-        </div>
+        <!-- Gráfico SVG interno representativo de capas geológicas -->
+        <svg class="svg-graphic" viewBox="0 0 500 150">
+          <rect width="500" height="40" fill="#1f2937"/><text x="20" y="25" fill="#9ca3af" font-size="11">1. Superficie terrestre / Sedimentos</text>
+          <rect y="40" width="500" height="45" fill="#374151"/><text x="20" y="67" fill="#9ca3af" font-size="11">2. Roca Sello (Impermeable)</text>
+          <rect y="85" width="500" height="45" fill="#b45309"/><text x="20" y="112" fill="#fef3c7" font-size="11" font-weight="bold">3. Roca Almacén con Petróleo (Yacimiento)</text>
+          <rect y="130" width="500" height="20" fill="#111827"/><text x="20" y="144" fill="#6b7280" font-size="10">4. Roca Madre</text>
+        </svg>
         <span class="tag">Formación Orgánica</span>
       </div>
     </details>
@@ -280,14 +281,14 @@
     <details>
       <summary>03. Importancia Estratégica y Soberanía</summary>
       <div class="content">
-        <p>El recurso petrolero constituye el eje central de la soberanía nacional a través de cuatro pilares:</p>
+        <p>El recurso petrolero conforma el pilar de la soberanía nacional bajo cuatro aspectos clave:</p>
         <ul>
-          <li><span class="highlight">Fuente de ingresos y divisas:</span> Constituye el principal motor económico y financiero de la República.</li>
-          <li><span class="highlight">Desarrollo e infraestructura:</span> Impulsó la modernización vial, urbana, médica y educativa durante el siglo XX y XXI.</li>
-          <li><span class="highlight">Matriz energética nacional:</span> Asegura el suministro de combustible e insumos térmicos para el país.</li>
-          <li><span class="highlight">Relevancia geopolítica:</span> Posiciona a Venezuela como referente estratégico en la OPEP y la política internacional.</li>
+          <li><span class="highlight">Fuente de ingresos y divisas:</span> Sostén financiero principal de la economía del país.</li>
+          <li><span class="highlight">Eje de desarrollo e infraestructura:</span> Impulsó históricamente la red vial, urbana y la modernización nacional.</li>
+          <li><span class="highlight">Matriz energética nacional:</span> Garantiza el abastecimiento interno de combustibles y derivados.</li>
+          <li><span class="highlight">Relevancia geopolítica:</span> Posiciona a la nación como un actor estratégico en el tablero energético mundial.</li>
         </ul>
-        <span class="tag">Geopolítica</span>
+        <span class="tag">Soberanía</span>
       </div>
     </details>
 
@@ -295,12 +296,12 @@
     <details>
       <summary>04. Tipos de Petróleo según Densidad</summary>
       <div class="content">
-        <p>El crudo se clasifica según la escala de gravedad API:</p>
+        <p>Se clasifican de acuerdo con la escala de gravedad API:</p>
         <ul>
-          <li><span class="highlight">Crudo Liviano (&gt;31.1° API):</span> Fluido y fácil de refinar; ideal para obtener gasolinas.</li>
-          <li><span class="highlight">Crudo Mediano (22.3° a 31.1° API):</span> Equilibrado para transporte y procesamiento.</li>
-          <li><span class="highlight">Crudo Pesado (10° a 22.3° API):</span> Alta densidad y viscosidad.</li>
-          <li><span class="highlight">Crudo Extrapesado (&lt;10° API):</span> Denso como el asfalto, característico de la Faja del Orinoco.</li>
+          <li><span class="highlight">Liviano (&gt;31.1° API):</span> Muy fluido, excelente rendimiento para gasolinas.</li>
+          <li><span class="highlight">Mediano (22.3° - 31.1° API):</span> Propiedades intermedias de procesamiento.</li>
+          <li><span class="highlight">Pesado (10° - 22.3° API):</span> Alta viscosidad y densidad elevada.</li>
+          <li><span class="highlight">Extrapesado (&lt;10° API):</span> Consistencia muy densa, característico de grandes reservas nacionales.</li>
         </ul>
         <span class="tag">Gravedad API</span>
       </div>
@@ -311,27 +312,29 @@
       <summary>05. Yacimientos Petrolíferos</summary>
       <div class="content">
         <p>
-          Un <span class="highlight">yacimiento</span> es una roca porosa y permeable subterránea (roca almacén) revestida por una capa impermeable (roca sello) que atrapa los hidrocarburos.
+          Un <span class="highlight">yacimiento</span> es una acumulación natural de hidrocarburos alojados en el interior de rocas porosas, confinados por barreras geológicas impenetrables.
         </p>
-        <ul>
-          <li><span class="highlight">Según el fluido:</span> Yacimientos de petróleo, de gas natural o mixtos.</li>
-          <li><span class="highlight">Según la trampa:</span> Estructurales (fallas o anticlinales) y estratigráficas.</li>
-        </ul>
-        <span class="tag">Estructura Subterránea</span>
+        <p>
+          Se clasifican según el tipo de trampa geológica que los retiene (estructurales por plegamientos o fallas, y estratigráficas por cambios en los tipos de roca).
+        </p>
+        <span class="tag">Geología Petrolera</span>
       </div>
     </details>
 
-    <!-- 06. FAJA DEL ORINOCO -->
+    <!-- 06. FAJA PETROLÍFERA DEL ORINOCO -->
     <details>
       <summary>06. Faja Petrolífera del Orinoco</summary>
       <div class="content">
         <p>
-          Ubicada al sur de la Cuenca Oriental, es la reserva hidrocarburífera de crudo extrapesado más grande del mundo.
+          Ubicada al sur de la cuenca oriental del país, la <span class="highlight">Faja Petrolífera del Orinoco «Hugo Chávez»</span> constituye la acumulación más grande de crudo extrapesado e in situ del planeta.
         </p>
         <p>
-          Anteriormente llamada <span class="highlight">«Faja Bituminosa»</span> debido a que en décadas pasadas se clasificó erróneamente su crudo como bitumen o asfalto natural no comercial. Investigaciones posteriores demostraron su naturaleza de petróleo pesado procesable, consolidando la soberanía energética del país.
+          Está dividida territorialmente en cuatro grandes bloques de exploración y explotación: Boyacá, Junín, Ayacucho y Carabobo. Su aprovechamiento requirió el desarrollo de tecnologías especiales de mejoramiento para transformar el crudo pesado en un producto comercializable a escala global.
         </p>
-        <span class="tag">Reserva Mundial</span>
+        <div class="fact-box">
+          <strong>Referencia clave:</strong> Abarca una extensión cercana a los 55.000 kilómetros cuadrados, siendo un bastión fundamental para la soberanía energética de Venezuela.
+        </div>
+        <span class="tag">Reserva Gigante</span>
       </div>
     </details>
 
@@ -339,13 +342,13 @@
     <details>
       <summary>07. Principales Cuencas Petrolíferas</summary>
       <div class="content">
-        <p>Distribución geográfica del petróleo en territorio venezolano:</p>
+        <p>El territorio venezolano cuenta con cuencas sedimentarias activas donde se concentra la riqueza hidrocarburífera:</p>
         <ul>
-          <li><span class="highlight">Cuenca del Lago de Maracaibo:</span> Históricamente la más productiva de la nación.</li>
-          <li><span class="highlight">Cuenca Oriental:</span> La más extensa, abarca Anzoátegui, Monagas, Sucre y la Faja del Orinoco.</li>
-          <li><span class="highlight">Cuenca Barinas-Apure:</span> Situada en los llanos occidentales.</li>
-          <li><span class="highlight">Cuenca Margarita / Marina:</span> Área insular rica en reservas gasíferas.</li>
-          <li><span class="highlight">Cuenca Tuy-Cariaco:</span> Ubicada en la costa central/oriental con potencial offshore.</li>
+          <li><span class="highlight">Cuenca del Lago de Maracaibo:</span> Históricamente la pionera y de mayor producción acumulada del siglo XX.</li>
+          <li><span class="highlight">Cuenca Oriental:</span> La más extensa, abarca los estados Monagas, Anzoátegui, Sucre y la Faja del Orinoco.</li>
+          <li><span class="highlight">Cuenca de Barinas - Apure:</span> Situada en la región suroccidental de los llanos venezolanos.</li>
+          <li><span class="highlight">Cuenca de Margarita:</span> Zona costa-afuera ubicada en el noreste con gasíferos de gran potencial.</li>
+          <li><span class="highlight">Cuenca del Tuy - Cariaco:</span> Situada en el centro-norte marino y costero del país.</li>
         </ul>
         <span class="tag">Geografía Nacional</span>
       </div>
@@ -354,7 +357,7 @@
   </main>
 
   <footer>
-    <p>Proyecto de Investigación Escolar</p>
+    <p>Proyecto de Investigación Escolar — Petróleo y Soberanía</p>
     <p><strong>U.E. Padre Reyes Cueta</strong> — Venezuela</p>
   </footer>
 
