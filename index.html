@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Petróleo y la Soberanía en Venezuela | Proyecto Educativo</title>
+  <title>Petróleo y Soberanía Nacional — U.E. Padre Reyes Cueta</title>
   <style>
-    /* Variables de diseño monocromático minimalista (Dark Mode) */
     :root {
-      --bg: #0b0c0e;
-      --card-bg: #131519;
-      --card-hover: #1b1e24;
-      --border: #262932;
-      --text: #e6e8ec;
-      --text-muted: #9aa0a6;
+      --bg: #0a0a0a;
+      --card: #141414;
+      --border: #262626;
+      --text: #e5e5e5;
       --accent: #ffffff;
-      --gold: #f4c430;
-      --blue: #00247d;
-      --red: #cf142b;
+      --muted: #a3a3a3;
+      --gold: #d4af37;
     }
 
     * {
@@ -28,138 +24,98 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      padding: 1rem 0.8rem 2rem 0.8rem;
-      max-width: 760px;
+      padding: 1rem;
+      max-width: 720px;
       margin: 0 auto;
     }
 
-    /* Header Institucional y Patriótico */
-    .top-bar {
+    /* ENCABEZADO INSTITUCIONAL */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .header-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
-      margin-bottom: 1.5rem;
+      gap: 10px;
+      margin-bottom: 1rem;
     }
 
-    .school-info {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .school-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: #1a1d24;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.75rem;
-      color: var(--accent);
-      overflow: hidden;
+    /* SVG de la Bandera de Venezuela */
+    .flag-svg {
+      width: 55px;
+      height: 38px;
+      border-radius: 4px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
       flex-shrink: 0;
     }
 
-    .school-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    /* Logo del Liceo adaptado */
+    .school-logo {
+      height: 48px;
+      max-width: 120px;
+      object-fit: contain;
+      /* Adapta la imagen eliminando el fondo blanco en modo oscuro */
+      filter: grayscale(100%) invert(100%) brightness(1.8);
+      mix-blend-mode: screen;
+      flex-shrink: 0;
     }
 
-    .school-details h3 {
+    .institution-info {
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .institution-info h2 {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .institution-info h3 {
       font-size: 0.95rem;
       color: var(--accent);
       font-weight: 600;
     }
 
-    .school-details p {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    /* Bandera de Venezuela SVG estilizada */
-    .flag-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 0.35rem 0.65rem;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-    }
-
-    .flag-icon {
-      width: 30px;
-      height: 20px;
-      border-radius: 3px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 0 5px rgba(0,0,0,0.6);
-      position: relative;
-    }
-    .flag-yellow { background: var(--gold); height: 33.33%; }
-    .flag-blue { 
-      background: var(--blue); 
-      height: 33.33%; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center;
-    }
-    .flag-red { background: var(--red); height: 33.33%; }
-
-    .country-code {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--text-muted);
-    }
-
-    /* Encabezado Principal */
-    header {
-      margin-bottom: 2rem;
-      text-align: left;
-    }
-
     h1 {
       color: var(--accent);
-      font-size: 1.75rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 0.5rem;
       letter-spacing: -0.02em;
+      margin-top: 0.5rem;
     }
 
     .subtitle {
-      color: var(--text-muted);
-      font-size: 0.95rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-top: 0.2rem;
     }
 
-    /* Tarjetas Desplegables (<details>) */
+    /* FICHAS Y TARJETAS DESPLEGABLES */
     details {
-      background-color: var(--card-bg);
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 8px;
       margin-bottom: 1rem;
       overflow: hidden;
-      transition: background-color 0.2s ease, border-color 0.2s ease;
+      transition: border-color 0.2s ease;
     }
 
     details[open] {
-      border-color: #3b4050;
-      background-color: #16181f;
+      border-color: #404040;
     }
 
     summary {
-      padding: 1.1rem 1.2rem;
-      font-size: 1.02rem;
+      padding: 1rem 1.25rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--accent);
       cursor: pointer;
@@ -168,7 +124,6 @@
       justify-content: space-between;
       align-items: center;
       user-select: none;
-      -webkit-tap-highlight-color: transparent;
     }
 
     summary::-webkit-details-marker {
@@ -176,314 +131,20 @@
     }
 
     summary::after {
-      content: "＋";
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      transition: transform 0.25s ease, color 0.25s ease;
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--muted);
+      transition: transform 0.2s;
     }
 
     details[open] summary::after {
-      content: "✕";
+      content: '−';
       color: var(--accent);
-      transform: rotate(90deg);
-    }
-
-    summary:hover {
-      background-color: var(--card-hover);
     }
 
     .content {
-      padding: 0 1.2rem 1.2rem 1.2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      margin-top: 0.2rem;
-      font-size: 0.93rem;
-      color: var(--text);
-    }
-
-    .content p {
-      margin-top: 0.8rem;
-    }
-
-    .highlight {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    ul {
-      margin: 0.8rem 0 0.8rem 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Contenedor de Imágenes Contextuales */
-    .img-container {
-      margin: 1.1rem 0 0.8rem 0;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      background: #0d0e11;
-    }
-
-    .img-container img {
-      width: 100%;
-      height: auto;
-      max-height: 240px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .caption {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-align: center;
-      padding: 0.45rem;
-      background: #0d0e11;
-      border-top: 1px solid rgba(255,255,255,0.03);
-    }
-
-    /* Gráficos de apoyo SVG integrados */
-    .svg-graphic {
-      width: 100%;
-      height: auto;
-      max-height: 160px;
-      padding: 1rem;
-      background: #0f1116;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #1f222b;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      margin-top: 0.8rem;
-      border: 1px solid var(--border);
-    }
-
-    footer {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.8rem;
+      padding: 0 1.25rem 1.25rem 1.25rem;
       border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-      margin-top: 2.5rem;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Barra Superior: Liceo y Bandera de Venezuela -->
-  <div class="top-bar">
-    <div class="school-info">
-      <div class="school-logo">
-        <img src="https://placehold.co/100x100/1a1d24/ffffff?text=LICEO" alt="Logo Liceo" onerror="this.style.display='none'; this.parentNode.innerText='LICEO'">
-      </div>
-      <div class="school-details">
-        <h3>República Bolivariana de Venezuela</h3>
-        <p>Proyecto de Investigación Escolar</p>
-      </div>
-    </div>
+      margin-top: 0.2rem;
+      padding-top: 1
     
-    <!-- Bandera de Venezuela con Estrellas SVG -->
-    <div class="flag-container" title="Venezuela">
-      <div class="flag-icon">
-        <div class="flag-yellow"></div>
-        <div class="flag-blue">
-          <svg width="22" height="6" viewBox="0 0 22 6" fill="white">
-            <circle cx="4" cy="4" r="0.6"/>
-            <circle cx="6.5" cy="2.5" r="0.6"/>
-            <circle cx="9.5" cy="1.8" r="0.6"/>
-            <circle cx="12.5" cy="1.8" r="0.6"/>
-            <circle cx="15.5" cy="2.5" r="0.6"/>
-            <circle cx="18" cy="4" r="0.6"/>
-            <circle cx="8" cy="4.2" r="0.6"/>
-            <circle cx="14" cy="4.2" r="0.6"/>
-          </svg>
-        </div>
-        <div class="flag-red"></div>
-      </div>
-      <span class="country-code">VE</span>
-    </div>
-  </div>
-
-  <!-- Encabezado Principal -->
-  <header>
-    <h1>Petróleo & Soberanía</h1>
-    <p class="subtitle">Investigación sobre el origen geológico, clasificación e impacto soberano en Venezuela.</p>
-  </header>
-
-  <main>
-
-    <!-- TARJETA 1 -->
-    <details open>
-      <summary>01. Etimología y Concepto</summary>
-      <div class="content">
-        <p>
-          La palabra <span class="highlight">petróleo</span> proviene del latín <em>petroleum</em>, compuesto por <em>petra</em> (piedra) y <em>oleum</em> (aceite), traduciéndose literalmente como <span class="highlight">«aceite de piedra»</span>. Este nombre refleja fielmente su naturaleza: una sustancia que fluye directamente desde los poros de la roca madre subterránea.
-        </p>
-        <p>
-          Químicamente, es un compuesto orgánico combustible de color oscuro (negro a pardo verdoso) y alta viscosidad a temperatura ambiente. Está constituido principalmente por una mezcla compleja de hidrocarburos.
-        </p>
-        
-        <!-- Ilustración SVG liviana (Roca madre sedimentaria con poros de petróleo) -->
-        <div class="img-container">
-          <div class="svg-graphic">
-            <svg viewBox="0 0 300 120" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <rect width="300" height="120" fill="#13151b"/>
-              <!-- Capa sedimentaria -->
-              <path d="M 0,40 Q 75,30 150,45 T 300,35 L 300,120 L 0,120 Z" fill="#222631"/>
-              <path d="M 0,75 Q 75,65 150,80 T 300,70 L 300,120 L 0,120 Z" fill="#181a22"/>
-              <!-- Poros con petróleo -->
-              <ellipse cx="60" cy="90" rx="18" ry="8" fill="#000" stroke="#444" stroke-width="1"/>
-              <ellipse cx="140" cy="85" rx="25" ry="10" fill="#000" stroke="#555" stroke-width="1"/>
-              <ellipse cx="230" cy="95" rx="20" ry="9" fill="#000" stroke="#444" stroke-width="1"/>
-              <text x="150" y="25" fill="#8a909a" font-size="11" text-anchor="middle" font-family="sans-serif">Capa Impermeable (Roca Sello)</text>
-              <text x="140" y="88" fill="#fff" font-size="9" text-anchor="middle" font-family="sans-serif">Crudo entrampado</text>
-            </svg>
-          </div>
-          <div class="caption">Esquema del crudo atrapado en los poros de la roca subterránea.</div>
-        </div>
-
-        <span class="tag">Etimología y Definición</span>
-      </div>
-    </details>
-
-    <!-- TARJETA 2 -->
-    <details>
-      <summary>02. Origen Geológico en el Mesozoico</summary>
-      <div class="content">
-        <p>
-          El petróleo venezolano no se originó a partir de dinosaurios, sino de <span class="highlight">microorganismos marinos, algas y plancton</span> que habitaban los mares cálidos y poco profundos que cubrían Venezuela en la era <span class="highlight">Mesozoica</span> (hace unos 100 millones de años).
-        </p>
-        <p>El proceso geológico abarcó tres etapas principales:</p>
-        <ul>
-          <li><span class="highlight">1. Acumulación Orgánica:</span> Millones de toneladas de zooplancton y fitoplancton morían y caían constantemente al lecho marino.</li>
-          <li><span class="highlight">2. Ambiente Anóxico (Sin Oxígeno):</span> Los restos quedaban cubiertos por capas sucesivas de limo y arcilla. La falta de oxígeno impidió que la materia orgánica se descompusiera por completo.</li>
-          <li><span class="highlight">3. Transformación Térmica:</span> Tras millones de años, la inmensa presión de los sedimentos superior y el calor de la Tierra ("cocción geológica") convirtieron esta materia biológica en hidrocarburos líquidos y gaseosos.</li>
-        </ul>
-
-        <!-- Imagen 100% concordante: Microorganismos marinos / fósiles geológicos -->
-        <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Fondo marino geológico y sedimentos" loading="lazy" onerror="this.src='https://placehold.co/600x200/121419/cccccc?text=Sedimentos+Marinos+Mesozoicos'">
-          <div class="caption">Fondo marino sedimentario similar a donde se depositó el fitoplancton mesozoico.</div>
-        </div>
-
-        <span class="tag">Geología Mesozoica</span>
-      </div>
-    </details>
-
-    <!-- TARJETA 3 -->
-    <details>
-      <summary>03. Importancia Estratégica y Soberanía</summary>
-      <div class="content">
-        <p>
-          La soberanía energética representa el derecho y la capacidad del Estado venezolano para administrar y dirigir sus recursos hidrocarburíferos en beneficio del desarrollo nacional:
-        </p>
-        <ul>
-          <li><span class="highlight">Ingreso de Divisas:</span> Constituye la fuente principal de fondos públicos para el sustento de la economía y la balanza comercial.</li>
-          <li><span class="highlight">Desarrollo e Infraestructura:</span> Históricamente ha impulsado el desarrollo de redes viales, electrificación nacional y ciudades industriales.</li>
-          <li><span class="highlight">Matriz Energética:</span> Garantiza el combustible necesario para las centrales térmicas, el transporte público y el parque industrial nacional.</li>
-          <li><span class="highlight">Geopolítica Internacional:</span> Fundador de la OPEP, Venezuela sostiene una voz clave en la estabilidad del mercado energético global.</li>
-        </ul>
-
-        <!-- Imagen 100% concordante: Refinería / Infraestructura energética nacional -->
-        <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Refinería e infraestructura energética" loading="lazy" onerror="this.src='https://placehold.co/600x200/121419/cccccc?text=Infraestructura+Petrolera'">
-          <div class="caption">La infraestructura de refinación es clave para la soberanía energética.</div>
-        </div>
-
-        <span class="tag">Soberanía y Estado</span>
-      </div>
-    </details>
-
-    <!-- TARJETA 4 -->
-    <details>
-      <summary>04. Tipos de Petróleo según su Densidad (Grados API)</summary>
-      <div class="content">
-        <p>
-          Los petróleos se clasifican técnicamente utilizando la escala de densidad del <span class="highlight">Instituto Americano del Petróleo (Grados API)</span>. A mayor grado API, el crudo es más liviano y fluido:
-        </p>
-        <ul>
-          <li><span class="highlight">Crudo Liviano ( > 31.1° API):</span> Muy fluido. Ideal para obtener altos porcentajes de gasolina y diésel sin procesos complejos.</li>
-          <li><span class="highlight">Crudo Mediano (22.3° a 31.1° API):</span> Densidad intermedia, fácil extracción y balance comercial de derivados.</li>
-          <li><span class="highlight">Crudo Pesado (10° a 22.3° API):</span> Viscoso, requiere mayor energía e infraestructura técnica para extraerlo.</li>
-          <li><span class="highlight">Crudo Extrapesado ( < 10° API):</span> Densidad superior a la del agua; fluye lentamente a temperatura ambiente y predomina en el sur del país.</li>
-        </ul>
-        <span class="tag">Clasificación Técnica</span>
-      </div>
-    </details>
-
-    <!-- TARJETA 5 -->
-    <details>
-      <summary>05. Yacimientos Petrolíferos</summary>
-      <div class="content">
-        <p>
-          Un <span class="highlight">yacimiento</span> es una estructura geológica subterránea donde el petróleo y el gas se encuentran atrapados en los poros de las rocas. No son "lagos subterráneos", sino esponjas de piedra empapadas en crudo.
-        </p>
-        <p><span class="highlight">Elementos del Yacimiento:</span></p>
-        <ul>
-          <li><span class="highlight">Roca Almacén:</span> Porosa y permeable (ej. areniscas) que alberga el crudo.</li>
-          <li><span class="highlight">Roca Sello:</span> Capa impermeable (ej. arcillas) situada encima, impidiendo que el petróleo escape a la superficie.</li>
-        </ul>
-        <p><span class="highlight">Tipos de Yacimientos:</span> Por fluido (petróleo, gas libre o mixto) y por trampa geológica (estructurales formadas por fallas o estratigráficas por cambios de roca).</p>
-        <span class="tag">Yacimientos</span>
-      </div>
-    </details>
-
-    <!-- TARJETA 6 -->
-    <details>
-      <summary>06. Faja Petrolífera del Orinoco</summary>
-      <div class="content">
-        <p>
-          La <span class="highlight">Faja Petrolífera del Orinoco</span> es una zona geográfica de más de 55.000 km² ubicada al sur del oriente venezolano, albergando la reserva de hidrocarburos más grande del planeta.
-        </p>
-        <p>
-          <span class="highlight">¿Por qué la llamaban "Faja Bituminosa"?</span><br>
-          Durante décadas, empresas extranjeras catalogaron intencionadamente la zona como «Faja Bituminosa», alegando que lo existente allí era bitumen (asfalto natural sin valor como petróleo). 
-        </p>
-        <p>
-          Estudios soberanos desarrollados por ingenieros venezolanos demostraron que se trataba de <span class="highlight">petróleo extrapesado completamente aprovechable</span> mediante tecnología de mejoradores, restituyendo a Venezuela el primer lugar del mundo en reservas probadas.
-        </p>
-
-        <!-- Imagen 100% concordante: Pozos en tierra / extracción de crudo extrapesado -->
-        <div class="img-container">
-          <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="Balancín de extracción de petróleo" loading="lazy" onerror="this.src='https://placehold.co/600x200/121419/cccccc?text=Extraccion+en+la+Faja'">
-          <div class="caption">Unidad de extracción (balancín) operando en campos petroleros.</div>
-        </div>
-
-        <span class="tag">Recursos Estratégicos</span>
-      </div>
-    </details>
-
-    <!-- TARJETA 7 -->
-    <details>
-      <summary>07. Cuencas Petrolíferas de Venezuela</summary>
-      <div class="content">
-        <p>
-          El territorio nacional está estructurado geológicamente en cinco cuencas principales:
-        </p>
-        <ul>
-          <li><span class="highlight">1. Cuenca del Lago de Maracaibo:</span> Cuna histórica de la producción comercial venezolana (pozos Zumaque I y Barroso II).</li>
-          <li><span class="highlight">2. Cuenca Oriental:</span> La más extensa y productiva en la actualidad; abarca Anzoátegui, Monagas, Guárico, Sucre y la Faja del Orinoco.</li>
-          <li><span class="highlight">3. Cuenca Barinas-Apure:</span> Ubicada en los llanos suroccidentales, caracterizada por crudos medianos y livianos.</li>
-          <li><span class="highlight">4. Cuenca de Margarita (Marina):</span> Región marina septentrional con elevado potencial en campos de gas natural.</li>
-          <li><span class="highlight">5. Cuenca Tuy-Cariaco:</span> Abarca la franja costera central y oriental, orientada a proyectos offshore.</li>
-        </ul>
-        <span class="tag">Geografía Económica</span>
-      </div>
-    </details>
-
-  </main>
-
-  <footer>
-    <p>Proyecto Escolar de Investigación — Petróleo y Soberanía Nacional</p>
-  </footer>
-
-</body>
-</html>
